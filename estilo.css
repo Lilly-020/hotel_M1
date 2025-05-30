@@ -1,0 +1,170 @@
+body {
+    width: auto;
+    height: 800vh;
+    background-image: url("fundo.png");
+}
+
+.teste {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-color: #1f1f1f;
+    /* Cria um trapézio com clip-path */
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 70%);
+    z-index: 10;
+  
+}
+
+#img_ap {
+    display: flex;
+    position: absolute;
+    left: 1395px;
+    top: 60px;
+    height: 450px;
+
+}
+
+.titulo{
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: rgb(134, 44, 44);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+.texto_resu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 1000px;
+    margin-left: 320px;
+    font-size: 20px;
+    color: rgb(170, 170, 170);
+}
+
+.di{
+    background-color: rgb(79, 85, 83, 0.3);
+    display: flex;
+    position: relative;
+    top: 20px;
+    width: 1650px;
+    height: 40px;
+    margin-left: 18px;
+    border-radius: 500px;
+
+}
+
+#img_icon{
+    margin-left: 20px;
+    width: 40px;
+    height: 50px;
+    align-items: center;
+}
+
+.tex{
+    margin-left: 150px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: rgb(207, 210, 213);
+    text-decoration: none;
+}
+.tex:hover {
+    color: brown;
+}
+
+.div_M{
+    position: relative;
+    background-color: rgb(79, 85, 83, 0.8);
+    width: 1600px;
+    height: 500px;
+    top: 530px;
+    margin: 30px;
+    border-radius: 30px; 
+    box-shadow: 5px 5px 13px rgba(0,0,0,0.6);  
+}
+#quem_somos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px ;
+    font-size: 50px;
+    color: rgb(198, 187, 187);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+#texto_sobre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    padding: 0px 30px 0px 30px;
+    color: rgb(225, 221, 221);
+}
+
+.titulo_trabalhos{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    top: 100px;
+    font-size: 40px;
+    color: rgb(154, 135, 135);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+.cartoes{
+    position: relative;
+    top: 90px;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.cartao{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+    padding: 30px;
+}
+.cartao_lados{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s; /*coloca a animação da rotação*/
+    transform-style: preserve-3d; /*Garante que os dois lados do card sejam mostrados*/
+}
+.cartao:hover .cartao_lados {
+  transform: rotateY(180deg); /*o quanto o cartão vai girar*/
+}
+.lado_1,
+.lado_2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /*nenhum lado sobrepoe o outro*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.lado_1 {
+  background: transparent;
+}
+#img_predio{
+    width: 250px;
+    height: 350px;
+    border-radius: 30px;
+}
+/* Verso do card */
+.lado_2 {
+  background: #261918;
+  color: white;
+  transform: rotateY(180deg); /*garante o funcionamento do card*/
+}
